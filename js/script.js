@@ -51,4 +51,16 @@ contactForm.addEventListener('submit', (e) => {
         alert('Please fill in all fields.');
     }
 });
+window.onload = function () {
+    const audio = document.getElementById("myAudio");
 
+    window.playMusic = function () {
+    audio.play().catch(error => {
+      console.error("ไม่สามารถเล่นเพลงได้:", error);
+    });
+  };
+
+    window.pauseMusic = function () {
+    audio.pause();
+  };
+};
